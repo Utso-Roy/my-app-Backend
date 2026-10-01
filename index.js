@@ -23,9 +23,16 @@ const client = new MongoClient(process.env.MONGO_URI, {
     deprecationErrors: true,
   },
 });
+let db;
 async function connectDB() {
   try {
+
+
     await client.connect();
+
+    db = client.db("aht_hurricane_helper");
+    console.log("Database Connected successfully" + " "+ db.databaseName)
+    const users = db.collection("users");
 
     console.log("MongoDB connected successfully");
  
