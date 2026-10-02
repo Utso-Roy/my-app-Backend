@@ -26,14 +26,14 @@ const client = new MongoClient(process.env.MONGO_URI, {
 let db;
 async function connectDB() {
   try {
-
-
     await client.connect();
-
     db = client.db("aht_hurricane_helper");
     console.log("Database Connected successfully" + " "+ db.databaseName)
     const users = db.collection("users");
-
+    const disasters = db.collection("disasters")
+    const help_requests = db.collection("help_requests")
+    const emergency_contacts = db.collection("emergency_contacts")
+    
     console.log("MongoDB connected successfully");
  
   } catch (error) {
