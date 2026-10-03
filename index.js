@@ -33,6 +33,8 @@ async function connectDB() {
     const disasters = db.collection("disasters")
     const help_requests = db.collection("help_requests")
     const emergency_contacts = db.collection("emergency_contacts")
+
+    
     
     console.log("MongoDB connected successfully");
  
