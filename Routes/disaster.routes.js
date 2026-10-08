@@ -6,7 +6,7 @@ const {
   createDisaster,
   updateDisaster,
   deleteDisaster,
-} = require("../controllers/disaster.controller");
+} = require("../disaster.controller");
 
 const router = express.Router();
 
